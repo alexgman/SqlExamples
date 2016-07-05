@@ -57,8 +57,16 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Functions" />
+    <Folder Include="StoredProcs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CreatingProcedures.sql" />
+    <Build Include="Functions\isFieldValid.sql" />
+    <Build Include="Functions\RandomInt.sql" />
+    <None Include="StoredProcs\sBucks.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoredProcs\LastPatient.sql" />
+    <None Include="StoredProcs\rand_bday.sql" />
   </ItemGroup>
 </Project>
